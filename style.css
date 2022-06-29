@@ -123,6 +123,7 @@ body {
 
 .menu-item:hover .submenu {
     display: block;
+    z-index: 5;
 }
 
 .submenu:hover ~ .menu-list {
@@ -201,3 +202,82 @@ body {
     left: -25%;
     top: -25%;
 }
+
+.select {
+    height: 100px;
+    border: 1px solid black;
+}
+
+.device-1 {
+    margin-right: 15px;
+    width: 270px;
+    
+}
+.device-2 {
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 270px;
+    
+}
+.device-3 {
+    margin-left: 15px;
+    width: 270px;
+    
+}
+
+.device-1,
+.device-2,
+.device-3 {
+    float: left;
+}
+
+.device-item-1,
+.device-item-2,
+.device-item-3 {
+    height: 100px;
+    border: 1px solid black;
+}
+
+.file {
+    height: 70px;
+}
+
+.file > p {
+    display: inline;
+    line-height: 70px;
+}
+
+.link-decor {
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+.link-decor:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.choise {
+    height: 95px;
+}
+
+.choise p {
+    font-size: 48px;
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    float: left;
+}
+
+.sort {
+    float: right;
+    background-color: #2c71b8;
+    border: 1px solid white;
+    color: #fff;
+    width: 270px;
+    height: 40px;
+    font-size: 21px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
