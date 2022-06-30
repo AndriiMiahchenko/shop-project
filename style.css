@@ -251,6 +251,7 @@ li.menu-item:hover > a > .before-hover {
 }
 
 .tablets-laptops {
+    height: 95px;
     font-size: 48px;
     line-height: 40px;
     color: #ffffff;
@@ -286,10 +287,50 @@ li.menu-item:hover > a > .before-hover {
 
 .sort:hover .drop-menu {
     display: block;
+    z-index: 5;
 }
 
 .img-position {
     position: absolute;
     left: 240px;
     top: 10px;
+}
+
+.product {
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+
+.product-image {
+    height: 180px;
+    background-color: rgba(255, 255, 255, 0.75);
+    position: relative;
+    padding: 10px;
+}
+
+.product-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.zoom {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #2c71b8;
+    background-image: url(images/icon\ \(8\).png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.like {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #2c71b8;
+    background-image: url(images/icon\ \(5\).png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
