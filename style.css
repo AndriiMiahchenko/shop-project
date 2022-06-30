@@ -420,3 +420,14 @@ sup {
     background-color: rgba(255, 255, 255, 0.2);
     border: none;
 }
+
+.load {
+    text-align: center;
+}
+
+.load-more {
+    font-size: 36px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 300;
+}
