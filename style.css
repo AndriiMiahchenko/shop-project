@@ -378,3 +378,16 @@ li.menu-item:hover > a > .before-hover {
     color: #ffffff;
     font-weight: 700;
 }
+
+.product-price {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+sup {
+    font-size: 21px;
+    vertical-align: top;
+}
