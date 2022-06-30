@@ -351,6 +351,7 @@ li.menu-item:hover > a > .before-hover {
 
 .product-body {
     border: 1px solid rgb(202, 219, 237);
+    background-color: rgb(44, 113, 184, 0.75);
     padding: 15px;
 }
 
@@ -390,4 +391,32 @@ li.menu-item:hover > a > .before-hover {
 sup {
     font-size: 21px;
     vertical-align: top;
+}
+
+.button {
+    width: 210px;
+    height: 50px;
+    background-color: #2c71b8;
+    border: 1px solid white;
+    font-size: 21px;
+    line-height: 50px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.product-body > button {
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.btn-add-to-cart {
+    background-image: url(images/icon\ \(2\).png);
+    background-repeat: no-repeat;
+    background-position: 185px;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
 }
