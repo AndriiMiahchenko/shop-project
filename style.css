@@ -230,6 +230,38 @@ li.menu-item:hover > a > .before-hover {
 
 /* main */
 
+.options {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ffffff;
+    padding: 30px;
+    font-size: 21px;
+    line-height: 40px;
+    color: #ffffff;
+}
+
+legend {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.device-type,
+.device-color {
+    margin-bottom: 60px;
+}
+
+.more-options {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.more-options > a {
+    text-decoration: none;
+    font-size: 21px;
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
 .breadcrumbs {
     height: 70px;
 }
@@ -423,11 +455,25 @@ sup {
 
 .load {
     text-align: center;
+    margin-bottom: 90px;
+    margin-top: 20px;
 }
 
 .load-more {
     font-size: 36px;
     text-decoration: none;
     color: #ffffff;
+    font-weight: 300;
+}
+
+.footer {
+    padding: 40px 0;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.copyright {
+    text-align: center;
+    font-size: 21px;
+    color: #2c71b8;
     font-weight: 300;
 }
