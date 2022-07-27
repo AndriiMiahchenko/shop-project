@@ -401,6 +401,11 @@ input[type="checkbox"]:checked + label::before {
     bottom: 100px;
 }
 
+.like-style {
+    background-color: #2c71b8;
+    background-image: url(images/icon\ \(7\).png);
+}
+
 .like:hover {
     background-color: #2c71b8;
     background-image: url(images/icon\ \(7\).png);
