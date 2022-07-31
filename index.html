@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
     <link rel="stylesheet" href="style.css" />
     <title>Shop project</title>
   </head>
@@ -82,6 +86,26 @@
       </div>
     </header>
     <main class="main">
+      <div class="slider">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="slider-block">
+                <div>
+                  <img class="img-size" src="images/iphone.jpg" alt="" />
+                </div>
+                <div>
+                  <img class="img-size" src="images/ipad.jpg" alt="" />
+                </div>
+                <div>
+                  <img class="img-size" src="images/macbook.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="container">
         <div class="row">
           <div class="col-md-3">
@@ -225,7 +249,7 @@
                   <div class="product-image">
                     <img src="images/icon (17).png" alt="" />
                     <div class="zoom"></div>
-                    <div class="like" id="like-click1"></div>
+                    <div class="like liked"></div>
                   </div>
                   <div class="product-body">
                     <div class="product-title">
@@ -253,7 +277,7 @@
                   <div class="product-image">
                     <img src="images/icon (16).png" alt="" />
                     <div class="zoom"></div>
-                    <div class="like" id="like-click2"></div>
+                    <div class="like" id="like-click"></div>
                   </div>
                   <div class="product-body">
                     <div class="product-title">
@@ -281,7 +305,7 @@
                   <div class="product-image">
                     <img src="images/icon (15).png" alt="" />
                     <div class="zoom"></div>
-                    <div class="like" id="like-click3"></div>
+                    <div class="like" id="like-click"></div>
                   </div>
                   <div class="product-body">
                     <div class="product-title">
@@ -311,7 +335,7 @@
                   <div class="product-image">
                     <img src="images/icon (11).png" alt="" />
                     <div class="zoom"></div>
-                    <div class="like" id="like-click4"></div>
+                    <div class="like" id="like-click"></div>
                   </div>
                   <div class="product-body">
                     <div class="product-title">
@@ -339,7 +363,7 @@
                   <div class="product-image">
                     <img src="images/icon (14).png" alt="" />
                     <div class="zoom"></div>
-                    <div class="like" id="like-click5"></div>
+                    <div class="like" id="like-click"></div>
                   </div>
                   <div class="product-body">
                     <div class="product-title">
@@ -367,7 +391,7 @@
                   <div class="product-image">
                     <img src="images/icon (9).png" alt="" />
                     <div class="zoom"></div>
-                    <div class="like" id="like-click6"></div>
+                    <div class="like" id="like-click"></div>
                   </div>
                   <div class="product-body">
                     <div class="product-title">
@@ -397,7 +421,7 @@
                   <div class="product-image">
                     <img src="images/icon (13).png" alt="" />
                     <div class="zoom"></div>
-                    <div class="like" id="like-click7"></div>
+                    <div class="like" id="like-click"></div>
                   </div>
                   <div class="product-body">
                     <div class="product-title">
@@ -425,7 +449,7 @@
                   <div class="product-image">
                     <img src="images/icon (12).png" alt="" />
                     <div class="zoom"></div>
-                    <div class="like" id="like-click8"></div>
+                    <div class="like" id="like-click"></div>
                   </div>
                   <div class="product-body">
                     <div class="product-title">
@@ -453,7 +477,7 @@
                   <div class="product-image">
                     <img src="images/icon (10).png" alt="" />
                     <div class="zoom"></div>
-                    <div class="like" id="like-click9"></div>
+                    <div class="like" id="like-click"></div>
                   </div>
                   <div class="product-body">
                     <div class="product-title">
@@ -489,6 +513,34 @@
     <footer class="footer">
       <div class="container copyright">&copy;Copyright 2017</div>
     </footer>
+
+    <div class="modal">
+      <div class="modal-block">
+        <form action="">
+          <div class="btn-close"><span class="btn-hover">X</span></div>
+          <h3 class="form-title">Please call for more details</h3>
+          <div class="form-field">
+            <input type="text" placeholder="Your name" />
+          </div>
+          <div class="form-field">
+            <input type="text" placeholder="Your phone" />
+          </div>
+          <div class="form-button">
+            <button>Please call</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 
     <script src="app.js"></script>
   </body>
