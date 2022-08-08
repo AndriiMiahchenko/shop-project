@@ -1,8 +1,7 @@
+// add to cart
 let productsCountEl = document.getElementById("products-count");
-console.log(productsCountEl);
 
 let addToCartBtns = document.querySelectorAll(".btn-add-to-cart");
-console.log(addToCartBtns);
 
 for (let i = 0; i < addToCartBtns.length; i++) {
   addToCartBtns[i].addEventListener("click", function () {
@@ -12,9 +11,8 @@ for (let i = 0; i < addToCartBtns.length; i++) {
   });
 }
 
-
+// change like state
 let likeBtns = document.querySelectorAll(".like");
-console.log(likeBtns);
 
 likeBtns.forEach((item) => item.addEventListener("click", function () {
   if (item.classList.contains("liked")) {
@@ -44,40 +42,73 @@ function closeModal() {
 moreDetailsBtns.forEach((item) => item.addEventListener("click", openModal));
 btnClose.addEventListener("click", closeModal);
 
-
+// slider
 $(".slider-block").slick({
   autoplay: true,
   dots: true,
 })
 
-const modalItems = document.querySelectorAll('.modal');
+// close in body 
+modal.addEventListener("click", function (e) {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
 
-if (modalItems.length > 0) {
-  window.addEventListener('scroll', modalOnScroll);
-
-  function modalOnScroll() {
-    for (let i = 0; i < modalItems.length; i++) {
-      const modalItems = modalItems[i];
-      const modalItemsHeight = modalItems.offsetHeight;
-      const modalItemsOffset = offset(modalItems).top;
-      const modalStart = 2;
-
-      let modalItemsPoint = window.innerHeight - modalItemsHeight / modalStart;
-      if (modalItemsHeight > window.innerHeight) {
-        modalItemsPoint = window.innerHeight - window.innerHeight / modalStart;
-      }
-
-      if ((pageYOffset > modalItemsOffset - modalItemsPoint) && (pageYOffset < (modalItemsOffset + modalItemsHeight))) {
-        modalItems.classList.add('show');
-      } else {
-        modalItems.classList.remove('show');
-      }
-    }
+// open modal by scroll
+function showModalByScroll() {
+  if (window.pageYOffset > document.body.scrollHeight/2) {
+    openModal();
+    window.removeEventListener("scroll", showModalByScroll);
   }
 }
 
-function offset(el) {
-  const rect = el.getBoundingClientRect(),
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  return { top: rect.top + scrollTop };
+window.addEventListener("scroll", showModalByScroll);
+
+setTimeout(() => openModal(), 5000);
+
+
+let decrementBtns = document.querySelectorAll(".decrement-btn");
+let incrementsBtns = document.querySelectorAll(".increment-btn");
+let quantityInput = document.querySelectorAll(".product-quantity input");
+
+// constructor
+
+function Counter(incBtn, decBtn, inpValue, minCount = 1, maxCount = 5) {
+  this.domRefs = {
+    incBtn,
+    decBtn,
+    inpValue,
+  };
+
+  this.toggleButtonState = function() {
+    let count = this.domRefs.inpValue.value;
+    this.domRefs.decBtn.disabled = count <= minCount;
+    this.domRefs.incBtn.disabled = count >= maxCount;
+  };
+
+  this.toggleButtonState();
+
+  this.increment = function() {
+    console.log(this);
+    this.domRefs.inpValue.value = +this.domRefs.inpValue.value + 1;
+    this.toggleButtonState();
+  }
+  this.decrement = function() {
+    this.domRefs.inpValue.value = +this.domRefs.inpValue.value - 1;
+    this.toggleButtonState();
+  }
+
+  this.domRefs.incBtn.addEventListener("click", this.increment.bind(this));
+  this.domRefs.decBtn.addEventListener("click", this.decrement.bind(this));
+
+  console.log(this);
 }
+
+
+let counter1 = new Counter(
+  incrementsBtns[0],
+  decrementBtns[0],
+  quantityInput[0]
+  );
+

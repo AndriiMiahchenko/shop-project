@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="style.css" />
     <title>Shop project</title>
   </head>
@@ -249,7 +251,7 @@
                   <div class="product-image">
                     <img src="images/icon (17).png" alt="" />
                     <div class="zoom"></div>
-                    <div class="like liked"></div>
+                    <div class="like"></div>
                   </div>
                   <div class="product-body">
                     <div class="product-title">
@@ -267,6 +269,11 @@
                     </div>
                     <div class="product-features"><span>RAM:</span> 1GB</div>
                     <div class="product-price">$599<sup>25</sup></div>
+                    <div class="product-quantity">
+                      <button class="decrement-btn">-</button>
+                      <input type="text" value="1" readonly>
+                      <button class="increment-btn">+</button>
+                    </div>
                     <button class="button btn-more-details">
                       More details
                     </button>
@@ -541,6 +548,8 @@
       src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="app.js"></script>
   </body>
